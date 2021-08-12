@@ -41,6 +41,9 @@ Route::middleware('auth.basic')->group(function(){
 
 
 	Route::delete('delete_article/{id}', [ 'as' => 'delete.article', 'uses' => 'ArticleController@destroy']);
+
+	Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 });
 
 
